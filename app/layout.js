@@ -1,8 +1,7 @@
 import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
-
-
+import { Suspense } from 'react'
 
 
 const geistSans = localFont({
@@ -32,8 +31,10 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <Suspense>
         <Navbar/>
         {children}
+        </Suspense>
       </body>
     </html>
   );

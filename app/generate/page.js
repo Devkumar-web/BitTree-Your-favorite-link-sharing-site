@@ -3,20 +3,16 @@ import React, { useState } from 'react'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useSearchParams } from 'next/navigation';
-import { Suspense } from 'react'
+
 
 const Generate = () => {
-  <Suspense>
   const searchParams = useSearchParams()
-  const [handle, sethandle] = useState(searchParams.get('handle'))
-  </Suspense>
- 
   
 
   // const [link, setlink] = useState("")
   // const [linktext, setlinktext] = useState("")
   const [links, setLinks] = useState([{link: "", linktext: ""}])
- 
+  const [handle, sethandle] = useState(searchParams.get('handle'))
   const [pic, setpic] = useState("")
   const [desc, setdesc] = useState("")
 
@@ -75,7 +71,7 @@ const Generate = () => {
    
 
   return (
-    <Suspense>
+    
     <div className='bg-[#E9C0E9] min-h-screen grid grid-cols-2 '>
      
       <div className="col1 flex justify-center items-center flex-col text-gray-900 ">
@@ -116,7 +112,6 @@ const Generate = () => {
         <ToastContainer />
       </div>
     </div>
-    </Suspense>
   )
 }
 
