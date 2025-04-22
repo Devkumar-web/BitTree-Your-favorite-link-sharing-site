@@ -6,8 +6,12 @@ import { useSearchParams } from 'next/navigation';
 import { Suspense } from 'react'
 
 const Generate = () => {
-
+  <Suspense>
   const searchParams = useSearchParams()
+  </Suspense>
+ 
+ 
+  
 
   // const [link, setlink] = useState("")
   // const [linktext, setlinktext] = useState("")
@@ -67,7 +71,7 @@ const Generate = () => {
  
        
   }
-
+   
 
   return (
     <Suspense>
