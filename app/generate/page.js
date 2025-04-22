@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useSearchParams } from 'next/navigation';
+import { Suspense } from 'react'
 
 const Generate = () => {
 
@@ -69,6 +70,7 @@ const Generate = () => {
 
 
   return (
+    <Suspense>
     <div className='bg-[#E9C0E9] min-h-screen grid grid-cols-2 '>
      
       <div className="col1 flex justify-center items-center flex-col text-gray-900 ">
@@ -109,6 +111,7 @@ const Generate = () => {
         <ToastContainer />
       </div>
     </div>
+    </Suspense>
   )
 }
 
