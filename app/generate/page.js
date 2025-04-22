@@ -8,18 +8,19 @@ import { Suspense } from 'react'
 const Generate = () => {
   <Suspense>
   const searchParams = useSearchParams()
+  const [handle, sethandle] = useState(searchParams.get('handle'))
   </Suspense>
- 
  
   
 
   // const [link, setlink] = useState("")
   // const [linktext, setlinktext] = useState("")
   const [links, setLinks] = useState([{link: "", linktext: ""}])
-  const [handle, sethandle] = useState(searchParams.get('handle'))
+ 
   const [pic, setpic] = useState("")
   const [desc, setdesc] = useState("")
 
+  
   const handleChange = (index, link, linktext) => { 
     setLinks((initialLinks)=>{
       return initialLinks.map((item, i)=>{
